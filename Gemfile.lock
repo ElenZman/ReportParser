@@ -1,0 +1,112 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    array_include_methods (1.5.1)
+    awesome_print (1.9.2)
+    chunky_png (1.4.0)
+    color (1.8)
+    csv (3.3.5)
+    equalizer (0.0.11)
+    facets (3.1.0)
+    fiddle (1.1.8)
+    glimmer (2.8.1)
+      array_include_methods (>= 1.4.0, < 1.6.0)
+      facets (>= 3.1.0, < 4.0.0)
+    glimmer-dsl-libui (0.13.1)
+      chunky_png (~> 1.4.0)
+      color (~> 1.8)
+      equalizer (= 0.0.11)
+      glimmer (~> 2.8.0)
+      libui (= 0.1.2)
+      os (>= 1.0.0, < 2.0.0)
+      perfect-shape (~> 1.0.8)
+      puts_debuggerer (>= 1.0.1, < 2.0.0)
+      rake (>= 10.1.0, < 14.0.0)
+      rake-tui (>= 0.2.3, < 2.0.0)
+      rouge (>= 3.26.0, < 4.0.0)
+      super_module (~> 1.4.1)
+      text-table (>= 1.2.4, < 2.0.0)
+    libui (0.1.2)
+    libui (0.1.2-arm64-darwin)
+    libui (0.1.2-x86_64-darwin)
+    logger (1.7.0)
+    matrix (0.4.3)
+    method_source (1.1.0)
+    os (1.1.4)
+    pastel (0.8.0)
+      tty-color (~> 0.5)
+    perfect-shape (1.0.8)
+      equalizer (>= 0.0.11, < 1.1.0)
+      matrix (>= 0.4.2, < 1.1.0)
+    puts_debuggerer (1.0.1)
+      awesome_print (~> 1.9.2)
+    rake (13.3.1)
+    rake-tui (0.2.3)
+      tty-prompt
+    rouge (3.30.0)
+    super_module (1.4.2)
+      method_source (>= 0.8.2, < 2.0.0)
+    text-table (1.2.4)
+    tty-color (0.6.0)
+    tty-cursor (0.7.1)
+    tty-prompt (0.23.1)
+      pastel (~> 0.8)
+      tty-reader (~> 0.8)
+    tty-reader (0.9.0)
+      tty-cursor (~> 0.7)
+      tty-screen (~> 0.8)
+      wisper (~> 2.0)
+    tty-screen (0.8.2)
+    wisper (2.0.1)
+
+PLATFORMS
+  arm64-darwin
+  ruby
+  x86_64-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  csv
+  fiddle
+  glimmer (~> 2.8)
+  glimmer-dsl-libui (~> 0.13)
+  logger
+
+CHECKSUMS
+  array_include_methods (1.5.1) sha256=c29e905b8511814e8f488ce1a219bb5638a8f5fa88af215a95f95da610bff0ce
+  awesome_print (1.9.2) sha256=e99b32b704acff16d768b3468680793ced40bfdc4537eb07e06a4be11133786e
+  chunky_png (1.4.0) sha256=89d5b31b55c0cf4da3cf89a2b4ebc3178d8abe8cbaf116a1dba95668502fdcfe
+  color (1.8) sha256=0a8512ecf6a8fe14928707f7d2766680c955b3a2224de198c1e25c837cd36f82
+  csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
+  equalizer (0.0.11) sha256=44e5bc46f49883e83d159ee9b1f7320b4ae8283bb6329e5d9716f5e7dde855ce
+  facets (3.1.0) sha256=7834a68824efbb35380ed7f6f590e01fb9a31a9466e317210e8803f72813c345
+  fiddle (1.1.8) sha256=7fa8ee3627271497f3add5503acdbc3f40b32f610fc1cf49634f083ef3f32eee
+  glimmer (2.8.1) sha256=e5427438cb97173daf59906eb7c435f509cf59ae62d4196bf4e53260f6e3a7e1
+  glimmer-dsl-libui (0.13.1) sha256=0009e312a1723fa756584035473b24c0991322735a0c2d8b689f5e71ca457e95
+  libui (0.1.2) sha256=8d1b6ce7ea5aa1670f27d1c31d0b6be8c85e0e0cd4dc1ac5182d9f7cbd7a9b26
+  libui (0.1.2-arm64-darwin) sha256=d5611e3a5c82d77839b218e8baa59975f11d9ac77405392f42321607a494cae0
+  libui (0.1.2-x86_64-darwin) sha256=fc0f9309d16f03e822c481374b8041c9ab74cc35c5bfdfd7985642f996454f2f
+  logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+  matrix (0.4.3) sha256=a0d5ab7ddcc1973ff690ab361b67f359acbb16958d1dc072b8b956a286564c5b
+  method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
+  os (1.1.4) sha256=57816d6a334e7bd6aed048f4b0308226c5fb027433b67d90a9ab435f35108d3f
+  pastel (0.8.0) sha256=481da9fb7d2f6e6b1a08faf11fa10363172dc40fd47848f096ae21209f805a75
+  perfect-shape (1.0.8) sha256=f03ada909cbfd5ceb2f858902be239d8cf17c81e37ec4b9fac9633fed7b43c2c
+  puts_debuggerer (1.0.1) sha256=846a807d645bba93d609c957fb5f5efee4ec84319d73b3b75beba75bd67abf4b
+  rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
+  rake-tui (0.2.3) sha256=bc8c942b2993dc5d2a7103823533b880687e27e314fa5fe99471f849f0d9785e
+  rouge (3.30.0) sha256=a3d353222aa72e49e2c86726c0bcfd719f82592f57d494474655f48e669eceb6
+  super_module (1.4.2) sha256=50172eefea196d3f7513e6c0c5856048a462087a8232d144a5f8680651b7dfe0
+  text-table (1.2.4) sha256=9224db31224b6151dfd3237e51d913a441b17dfc999a582774c0ba4496a5d01b
+  tty-color (0.6.0) sha256=6f9c37ca3a4e2367fb2e6d09722762647d6f455c111f05b59f35730eeb24332a
+  tty-cursor (0.7.1) sha256=79534185e6a777888d88628b14b6a1fdf5154a603f285f80b1753e1908e0bf48
+  tty-prompt (0.23.1) sha256=fcdbce905238993f27eecfdf67597a636bc839d92192f6a0eef22b8166449ec8
+  tty-reader (0.9.0) sha256=c62972c985c0b1566f0e56743b6a7882f979d3dc32ff491ed490a076f899c2b1
+  tty-screen (0.8.2) sha256=c090652115beae764336c28802d633f204fb84da93c6a968aa5d8e319e819b50
+  wisper (2.0.1) sha256=ce17bc5c3a166f241a2e6613848b025c8146fce2defba505920c1d1f3f88fae6
+
+RUBY VERSION
+  ruby 4.0.0
+
+BUNDLED WITH
+  4.0.3
