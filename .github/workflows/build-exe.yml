@@ -27,16 +27,17 @@ jobs:
         run: gem install ocra  # OCRA isn't typically in Gemfile
 
       - name: Build EXE with OCRA
+        shell: pwsh
         run: |
           ocra bin/app `
             --gemfile Gemfile `
+            --no-autoload `
             --windows `
             --output ReportParser.exe `
             --icon assets/icon.ico `
             lib/app/report_template.docx `
             config.yml `
             assets/icon.ico
-        shell: pwsh  # Specify PowerShell for better line continuation
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
