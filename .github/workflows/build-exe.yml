@@ -15,29 +15,56 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '4.0'  # Changed from 4.0 (which doesn't exist)
+          ruby-version: '3.2'  # Ruby 4.0 не существует!
+
+      - name: Cache Gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os } }-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
 
       - name: Add Windows platform to lockfile
         run: bundle lock --add-platform x64-mingw-ucrt
 
+      - name: Bundle config
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle config set --local without 'development test'
+
       - name: Install gems
-        run: bundle install
+        run: bundle install --jobs 4 --retry 3
 
       - name: Install OCRA gem
-        run: gem install ocra  # OCRA isn't typically in Gemfile
+        run: gem install ocra
 
-      - name: Build EXE with OCRA
-        shell: pwsh
+      - name: Analyze dependencies
         run: |
+          echo "=== Gemfile size ==="
+          type Gemfile
+          echo "=== Gemfile.lock gems count ==="
+          Select-String -Path Gemfile.lock -Pattern "^    [a-z]" | Measure-Object | % { $_.Count }
+        shell: pwsh
+
+      - name: Build EXE with OCRA (with debug)
+        run: |
+          Write-Host "Starting OCRA build at $(Get-Date)" -ForegroundColor Green
           ocra bin/app `
             --gemfile Gemfile `
-            --no-autoload `
+            --no-autodeps `
             --windows `
             --output ReportParser.exe `
             --icon assets/icon.ico `
+            --debug `
+            --verbose `
+            --chdir-first `
+            --no-lzma `
             lib/app/report_template.docx `
             config.yml `
             assets/icon.ico
+          Write-Host "OCRA build finished at $(Get-Date)" -ForegroundColor Green
+        shell: pwsh
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
