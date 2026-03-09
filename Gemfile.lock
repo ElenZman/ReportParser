@@ -6,6 +6,9 @@ GEM
     chunky_png (1.4.0)
     color (1.8)
     csv (3.3.5)
+    docx (0.10.0)
+      nokogiri (~> 1.13, >= 1.13.0)
+      rubyzip (>= 2.0, < 4)
     equalizer (0.0.11)
     facets (3.1.0)
     fiddle (1.1.8)
@@ -74,11 +77,13 @@ PLATFORMS
 
 DEPENDENCIES
   csv
+  docx (~> 0.10)
   fiddle
   glimmer (~> 2.8)
   glimmer-dsl-libui (~> 0.13)
   logger
   nokogiri (~> 1.19)
+  ocra
   rubyzip (~> 3.2)
 
 CHECKSUMS
@@ -87,6 +92,7 @@ CHECKSUMS
   chunky_png (1.4.0) sha256=89d5b31b55c0cf4da3cf89a2b4ebc3178d8abe8cbaf116a1dba95668502fdcfe
   color (1.8) sha256=0a8512ecf6a8fe14928707f7d2766680c955b3a2224de198c1e25c837cd36f82
   csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
+  docx (0.10.0) sha256=8e27a77a93813a18919d4e4bd0e16b27cb3ce1c03ad5587b7b4a860d7c08d204
   equalizer (0.0.11) sha256=44e5bc46f49883e83d159ee9b1f7320b4ae8283bb6329e5d9716f5e7dde855ce
   facets (3.1.0) sha256=7834a68824efbb35380ed7f6f590e01fb9a31a9466e317210e8803f72813c345
   fiddle (1.1.8) sha256=7fa8ee3627271497f3add5503acdbc3f40b32f610fc1cf49634f083ef3f32eee

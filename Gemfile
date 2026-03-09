@@ -14,5 +14,6 @@ gem "csv"
 gem "nokogiri", "~> 1.19"
 
 gem "rubyzip", "~> 3.2"
+gem "docx", "~> 0.10"
 
 gem "ocra", require: false, platforms: :mingw
