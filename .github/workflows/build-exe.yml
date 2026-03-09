@@ -1,0 +1,41 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - name: Install gems
+        run: bundle install
+
+      - name: Build EXE with OCRA
+        run: |
+          bundle exec ocra bin/app `
+            --gemfile Gemfile `
+            --windows `
+            --output ReportParser.exe`
+            --icon assets/icon.ico `
+            lib/app/report_template.docx `
+            config.yml `
+            assets/icon.ico
+        continue-on-error: false
+
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ReportParser-windows
+          path: ReportParser.exe
+          retention-days: 30

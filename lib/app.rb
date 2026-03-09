@@ -1,5 +1,5 @@
 require 'glimmer-dsl-libui'
-require_relative 'views/reports_parser'
+require_relative 'app/views/reports_parser'
 
 class MyApp
   include Glimmer
