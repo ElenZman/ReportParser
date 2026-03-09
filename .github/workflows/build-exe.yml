@@ -36,14 +36,11 @@ jobs:
       - name: Install gems
         run: bundle install --jobs 4 --retry 3
 
-      - name: Install OCRA gem
-        run: gem install ocra
-
       - name: Build EXE with OCRA
         shell: pwsh
         run: |
           Write-Host "Starting OCRA build at $(Get-Date)" -ForegroundColor Green
-          ocra bin/app `
+          bundle exec ocra bin/app `
             --gemfile Gemfile `
             --no-autoload `
             --windows `
